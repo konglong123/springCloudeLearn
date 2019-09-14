@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  host: localhost
+spring:
+  application:
+    name: sayHello
+
+#向http://ekServer1:80/eureka/注册本服务
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ekServer1:80/eureka/

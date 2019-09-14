@@ -1,0 +1,4 @@
+demo-eureka:注册中心
+demo-eureka-server2:注册中心
+demo-eureka-client-one：客户端（提供服务）
+demo-eureka-client-caller1:客户端（消费服务）

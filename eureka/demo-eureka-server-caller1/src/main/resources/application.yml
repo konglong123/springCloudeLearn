@@ -1,0 +1,13 @@
+server:
+  port: 8081
+  host: localhost
+spring:
+  application:
+    name: callHello
+
+#serviceUrl为服务端的url（见服务端配置）
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ekServer2:81/eureka/
+

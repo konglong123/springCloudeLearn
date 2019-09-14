@@ -1,0 +1,22 @@
+server:
+  port: 8083
+  host: localhost
+spring:
+  application:
+    name: callHello
+
+#向http://ekServer1:80/eureka/注册本服务
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ekServer1:80/eureka/
+
+#配置本程序中使用的rule以及ping，比程序中创建好
+#通过LoadBalancerClient引入策略
+#该配置，只针对请求sayHello服务，可以配置全局的Ribbon参数
+sayHello:
+  ribbon:
+    NFLoadBalabcerRuleClassName: com.kong.demoeurekaservercaller.demoeurekaservercaller.entity.RibbonRule
+    NFLoadBalabcerPingClassName: com.kong.demoeurekaservercaller.demoeurekaservercaller.entity.RibbonPing
+    listOfServers:
+      http://localhost:8080,http://localhost:8081,http://localhost:8082
