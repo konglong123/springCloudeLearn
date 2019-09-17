@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: serviceProvider
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ekServer1:80/eureka/

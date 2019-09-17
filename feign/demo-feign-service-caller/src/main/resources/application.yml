@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+#单机服务端不需要注册服务，查询服务，集群仍然需要
+#单机降低renewal-percent-threshold值，默认0.85
+#指定该服务向ekserver2注册
+eureka:
+  client:
+    #registerWithEureka: false
+    #fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://ekServer1:80/eureka/
+spring:
+  application:
+    name: serviceCaller
+
+#feign客户端的日志模式,指定FeignInterface中的日志方式
+logging:
+  level:
+    com.kong.demofeignservicecaller.FeignInterface: DEBUG
+
+

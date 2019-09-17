@@ -1,0 +1,12 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: myZuul
+
+zuul:
+  routes:
+    ZuulRoute:
+      path: /hello/**
+      url: http://www.cnblogs.com
